@@ -13,6 +13,7 @@
 		61E07E4F1B711E9900B082BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61E07E4E1B711E9900B082BD /* Images.xcassets */; };
 		61E07E521B711E9900B082BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61E07E501B711E9900B082BD /* LaunchScreen.xib */; };
 		61E07E5E1B711E9900B082BD /* AnimationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E07E5D1B711E9900B082BD /* AnimationsTests.swift */; };
+		61E07E681B71361B00B082BD /* NoAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E07E671B71361B00B082BD /* NoAutoLayoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		61E07E571B711E9900B082BD /* AnimationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E07E5C1B711E9900B082BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61E07E5D1B711E9900B082BD /* AnimationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsTests.swift; sourceTree = "<group>"; };
+		61E07E671B71361B00B082BD /* NoAutoLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoAutoLayoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				61E07E4E1B711E9900B082BD /* Images.xcassets */,
 				61E07E501B711E9900B082BD /* LaunchScreen.xib */,
 				61E07E451B711E9900B082BD /* Supporting Files */,
+				61E07E671B71361B00B082BD /* NoAutoLayoutViewController.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61E07E681B71361B00B082BD /* NoAutoLayoutViewController.swift in Sources */,
 				61E07E4A1B711E9900B082BD /* ViewController.swift in Sources */,
 				61E07E481B711E9900B082BD /* AppDelegate.swift in Sources */,
 			);

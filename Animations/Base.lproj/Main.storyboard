@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Animations" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +16,149 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFZ-eZ-HMd">
+                                <rect key="frame" x="16" y="68" width="50" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.25046901463928084" blue="0.23151450747747548" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fFZ-eZ-HMd" secondAttribute="height" multiplier="1:1" id="YB2-Ia-N6d"/>
+                                    <constraint firstAttribute="width" constant="50" id="Zkb-7i-oRZ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDv-2d-lE3">
+                                <rect key="frame" x="20" y="20" width="95" height="30"/>
+                                <state key="normal" title="Transform Me">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="transformMe:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Eme-FJ-d6k"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JVU-Fo-GDy">
+                                <rect key="frame" x="16" y="145" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.22342498952371415" green="1" blue="0.24025412101972909" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="gBJ-sg-ciZ"/>
+                                    <constraint firstAttribute="height" constant="50" id="ugW-tv-Uti"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3m2-G2-1PR">
+                                <rect key="frame" x="16" y="218" width="50" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.68892147087792854" blue="0.13882368431759473" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Mod-nr-k0m"/>
+                                    <constraint firstAttribute="width" constant="50" id="tkV-7Z-4xx"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLe-3Q-ttM">
+                                <rect key="frame" x="135" y="20" width="66" height="30"/>
+                                <state key="normal" title="Transition">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="transitionMe:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zw4-uq-O0S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcP-P3-o9o">
+                                <rect key="frame" x="221" y="20" width="132" height="30"/>
+                                <state key="normal" title="Animate Constraint">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="animateConstraint:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8yE-FD-Rwp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aca-qi-ATt">
+                                <rect key="frame" x="20" y="332" width="126" height="30"/>
+                                <state key="normal" title="Spring Animations">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="VeL-F3-dEO" kind="presentation" id="hti-Zb-xl5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fFZ-eZ-HMd" firstAttribute="leading" secondItem="JVU-Fo-GDy" secondAttribute="leading" id="7QF-rG-zle"/>
+                            <constraint firstItem="IDv-2d-lE3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="7YP-2Y-owe"/>
+                            <constraint firstItem="fFZ-eZ-HMd" firstAttribute="leading" secondItem="3m2-G2-1PR" secondAttribute="leading" id="8Pi-zp-swg"/>
+                            <constraint firstItem="rcP-P3-o9o" firstAttribute="leading" secondItem="WLe-3Q-ttM" secondAttribute="trailing" constant="20" id="FKs-QG-Dle"/>
+                            <constraint firstItem="fFZ-eZ-HMd" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="48" id="P7H-2Q-ZiF"/>
+                            <constraint firstItem="fFZ-eZ-HMd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="WcM-bU-R9s"/>
+                            <constraint firstItem="JVU-Fo-GDy" firstAttribute="top" secondItem="fFZ-eZ-HMd" secondAttribute="bottom" constant="27" id="efA-1D-zqA"/>
+                            <constraint firstItem="IDv-2d-lE3" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="fcf-6S-96b"/>
+                            <constraint firstItem="WLe-3Q-ttM" firstAttribute="leading" secondItem="IDv-2d-lE3" secondAttribute="trailing" constant="20" id="hwR-cX-s6k"/>
+                            <constraint firstItem="3m2-G2-1PR" firstAttribute="top" secondItem="JVU-Fo-GDy" secondAttribute="bottom" constant="23" id="tlq-69-wtD"/>
+                            <constraint firstItem="IDv-2d-lE3" firstAttribute="baseline" secondItem="WLe-3Q-ttM" secondAttribute="baseline" id="xPO-fi-rAe"/>
+                            <constraint firstItem="rcP-P3-o9o" firstAttribute="baseline" secondItem="WLe-3Q-ttM" secondAttribute="baseline" id="za7-hZ-RFz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animateButton" destination="IDv-2d-lE3" id="nOV-8b-ale"/>
+                        <outlet property="greenView" destination="JVU-Fo-GDy" id="aKm-Zx-Ygq"/>
+                        <outlet property="orangeView" destination="3m2-G2-1PR" id="Jog-sy-ltf"/>
+                        <outlet property="redView" destination="fFZ-eZ-HMd" id="Ajz-J0-LrK"/>
+                        <outlet property="redWidthConstraint" destination="Zkb-7i-oRZ" id="2tz-YC-XYu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--No Auto Layout View Controller-->
+        <scene sceneID="51F-hR-YVF">
+            <objects>
+                <viewController id="VeL-F3-dEO" customClass="NoAutoLayoutViewController" customModule="Animations" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZNJ-jQ-kcI"/>
+                        <viewControllerLayoutGuide type="bottom" id="dLh-x9-doJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6sY-LS-634">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aPr-u1-cDT">
+                                <rect key="frame" x="16" y="68" width="50" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.15378653671835596" blue="0.11217251438828357" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ufe-hf-w3B">
+                                <rect key="frame" x="16" y="145" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.184488432121789" green="1" blue="0.12708356897143658" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ae9-l7-O1v">
+                                <rect key="frame" x="16" y="218" width="50" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.71443258916648422" blue="0.22840342317286688" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbB-sy-5yq">
+                                <rect key="frame" x="16" y="20" width="82" height="30"/>
+                                <state key="normal" title="Animate Me">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="animateMe:" destination="VeL-F3-dEO" eventType="touchUpInside" id="ekr-2z-tlF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvw-9e-BWu">
+                                <rect key="frame" x="130" y="20" width="54" height="30"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismiss:" destination="VeL-F3-dEO" eventType="touchUpInside" id="8CK-JJ-Va7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="greenView" destination="ufe-hf-w3B" id="ua9-i5-UQi"/>
+                        <outlet property="orangeView" destination="Ae9-l7-O1v" id="wwe-ir-nRh"/>
+                        <outlet property="redView" destination="aPr-u1-cDT" id="Jzv-wm-sj8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ixn-nB-GBk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1165" y="420"/>
         </scene>
     </scenes>
 </document>
